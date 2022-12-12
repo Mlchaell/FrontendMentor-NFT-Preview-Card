@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --clr-soft-blue: hsl(215, 51%, 70%);
+  --clr-cyan: hsl(178, 100%, 50%);
+
+  --clr-dark-blue-1: hsl(217, 54%, 11%); /* Main */
+  --clr-dark-blue-2: hsl(216, 50%, 16%); /* Card */
+  --clr-dark-blue-3: hsl(215, 32%, 27%); /* Line */
+
+  --fw-bold: 600;
+  --fw-reg: 400;
+  --fw-light: 300;
+  }
+
+/* CSS Reset: https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,h1,h2,h3,h4,p,figure,blockquote,dl,dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background-color: var(--clr-dark-blue-1);
+  color: white;
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.125rem;
+
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,button,textarea,select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* 
+================
+====MAIN CSS====
+================
+*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+.card {
+  display: grid;
+  background-color: var(--clr-dark-blue-2);
+
+  gap: 1em;
+  padding: 1em;
+  margin: 0em 2em;
+  max-width: 20em;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card > img {
+  border-radius: 10px;
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+
+  padding-top: 1em;
+  border-top: 1px solid var(--clr-dark-blue-3);
+}
+
+.profile > img {
+  max-width: 2em;
+  margin-right: 0.5em;
+
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+/* 
+================
+===HELPER CSS===
+================
+*/
+
+.main-txt {
+  font-size: 0.875rem;
+  font-weight: var(--fw-light);
+  color: var(--clr-soft-blue);
+}
+
+.cyan-txt {
+  font-weight: var(--fw-bold);
+  color: var(--clr-cyan);
+}
