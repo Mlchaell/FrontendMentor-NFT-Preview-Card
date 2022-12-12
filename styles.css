@@ -112,12 +112,6 @@ input,button,textarea,select {
   border-radius: 10px;
 }
 
-.flex-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .profile {
   display: flex;
   align-items: center;
@@ -149,4 +143,18 @@ input,button,textarea,select {
 .cyan-txt {
   font-weight: var(--fw-bold);
   color: var(--clr-cyan);
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.5em;
+}
+
+.margin-r {
+  margin-right: 1em;
 }
